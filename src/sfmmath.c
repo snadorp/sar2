@@ -37,6 +37,7 @@ double SFMFeetToMeters(double feet);
 double SFMMetersToMiles(double m);
 double SFMMilesToMeters(double miles);
 double SFMMPHToMPC(double mph);
+double SFMKTSToMPC(double kts);
 double SFMMPHToKTS(double mph);
 double SFMKTSToMPH(double kts);
 double SFMMPCToMPH(double mpc);
@@ -204,6 +205,13 @@ double SFMMPHToMPC(double mph)
 	);
 }
 
+/*
+ *      Convert nautical miles per hour to meters per cycle:
+ */
+double SFMKTSToMPC(double kts)
+{
+    return SFMMPHToMPC(SFMKTSToMPH(kts));
+}
 /*
  *	Convert miles (US Statute) per hour to nautical miles per hour:
  */

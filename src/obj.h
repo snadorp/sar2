@@ -208,6 +208,13 @@ typedef struct {
 } sar_intercept_struct;
 #define SAR_INTERCEPT(p)	((sar_intercept_struct *)(p))
 
+/*
+ *	Wind:
+ */
+typedef enum {
+    SAR_WIND_FLAG_GUSTS
+} sar_wind_flags;
+
 
 /*
  *	Light:
@@ -1865,8 +1872,13 @@ typedef struct {
 	/* Rain density coefficient, 0.0 for no rain, 0.5 for moderate,
 	 * 1.0 for densest rain
 	 */
-	float		rain_density_coeff;
+ 	float		rain_density_coeff;
 
+	/* Wind options */
+     	float		wind_heading;
+     	float		wind_speed;
+     	sar_obj_flags_t	wind_flags;
+    
 	/* Reference to player object */
 	int			player_obj_num;
 	sar_object_struct	*player_obj_ptr;

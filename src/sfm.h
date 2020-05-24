@@ -146,6 +146,7 @@ extern double SFMFeetToMeters(double feet);
 extern double SFMMetersToMiles(double m);
 extern double SFMMilesToMeters(double miles);
 extern double SFMMPHToMPC(double mph);
+extern double SFMKTSToMPC(double kts);
 extern double SFMMPHToKTS(double mph);
 extern double SFMKTSToMPH(double kts);
 extern double SFMMPCToMPH(double mpc);
