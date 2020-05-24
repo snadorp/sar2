@@ -1730,9 +1730,9 @@ sar_mission_struct *SARMissionLoadFromFile(
 		p_wind = (sar_parm_wind_struct *)p;
 		if(loaded_scene)
 		{
-		    scene->wind_heading = p_wind->heading;
-		    scene->wind_speed = p_wind->speed;
-		    scene->wind_flags = p_wind->flags;
+		    scene->realm->wind_heading = p_wind->heading;
+		    scene->realm->wind_speed = p_wind->speed;
+		    scene->realm->wind_flags = p_wind->flags;
 		}
 		else
 		{

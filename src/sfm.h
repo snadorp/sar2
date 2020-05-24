@@ -42,8 +42,6 @@
  */
 #define SFMDefaultGravity	9.8
 
-
-
 /*
  *	Core structure:
  */
@@ -58,7 +56,10 @@ typedef struct {
 	/* Simulation constants */
 	double		gravity;		/* Gravity (in meters per cycle^2) */
 
-
+	/* Wind params */
+	double         	wind_heading;	/* In radians */
+	double  	wind_speed;	/* In meters per Cycle */
+	unsigned long 	wind_flags;
 	/* Callbacks, typical inputs are; realm pointer,
 	 * model pointer, client data
 	 */
